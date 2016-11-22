@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- 
+Vault Template
+http://www.templatemo.com/preview/templatemo_426_Vault
+-->
+<head>
+<title>Vault</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+<!-- Style Sheets -->
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/templatemo_misc.css">
+<link rel="stylesheet" href="css/templatemo_style.css">
+<link rel="stylesheet" href="css/styles.css">
+<!-- JavaScripts -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/jquery.singlePageNav.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.lightbox.js"></script>
+<script src="js/templatemo_custom.js"></script>
+<script src="js/responsiveCarousel.min.js"></script>
+</head>
+<body>
+<!-- header start -->
+<div id="templatemo_home_page">
+  <div class="templatemo_topbar">
+    <div class="container">
+      <div class="row">
+        <div class="templatemo_titlewrapper"><img src="images/templatemo_logobg.png" alt="logo background">
+          <div class="templatemo_title"><span>Vault</span></div>
+        </div>
+        <div class="clear"></div>
+        <div class="templatemo_titlewrappersmall">Vault</div>
+        <nav class="navbar navbar-default templatemo_menu" role="navigation">
+          <div class="container-fluid"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="top-menu">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a class="menu" href="index.html">Home</a></li>
+                  <li><a class="menu" href="features.html">Features</a></li>
+                  <li class="dropdown">
+              		<a target="_blank" class="dropdown-toggle" data-toggle="dropdown">
+                		Docs <b class="caret"></b>
+              		</a>
+              		<ul class="dropdown-menu">
+                		<li><a target="_blank" href="https://github.com/polyu-vault/vault-website/wiki">Quick Start</a></li>
+                		<li class="divider"></li>
+              		</ul>
+            	  </li>
+                  <li><a class="menu" href="research.html">Research</a></li>
+                  <li><a class="menu" href="contact.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.navbar-collapse --> 
+          </div>
+          <!-- /.container-fluid --> 
+        </nav>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+ 
+<!-- header end -->
+<div class="clear"></div>
+<!-- service start -->
+<br><br><br><br><br>
+
+   
+<div class="container">
+	  <br>
+      <h1 align="left">Objectives</h1>
+	  <ul>
+		
+		<li type="square"><b>Shared-Process Consolidation</b></li>
+		<ul>
+			<li type="circle">The Shared-Process approach is to share a single database instance among the tenants but each tenant can own its private set of tables</li>
+			<li type="circle">This approach leads to a higher consolidation effectiveness</li>
+		</ul>
+     	
+     	<li type="square"><b>Performance SLA Guarantee</b></li>
+     	<ul>
+			<li type="circle">Ensure that a tenant finishes its queries without feeling any performance delay in a specific percentage of time period.</li>
+		</ul>
+     	
+     	<li type="square"><b>High Availability & Load Balancing</b></li>
+     	<ul>
+			<li type="circle">Multiple MPPDBs in each tenant group allows workload balancing in Vault.</li>
+			<li type="circle">Vault is able to route the query request to the another available MPPDB which has the lowest workload.</li>
+			<li type="circle">Avoid the situation that some MPPDBs handle lots of query requests, but some MPPDBs in the same cluster are idle.</li>
+		</ul>
+		
+     	<li type="square"><b>Support General Tenants</b></li>
+     	<ul>
+			<li type="circle">Most of the tenants will not create a MPPDB with a large amount of nodes.</li>
+			<li type="circle">The number of nodes in each MPPDB requested by most of the tenants is common and reasonable so most of the tenants can be consolidated into different group to share the cloud resources.</li>
+		</ul>
+      </ul>
+</div>
+
+<div class="templatemo_servicewrapper" id="templatemo_service_page">
+  <div class="container">
+    <div class="row">      
+      <h1 align="left">Functions</h1>
+      <br>
+      <div class="col-md-3 col-sm-6">
+        <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
+          <div class="templatemo_service_title">Query Routing</div>
+          <p>Database user send their queries through the JDBC application, and then queries will be routed to the available MPPDBs. Database user do not need to specify the destination of the query because Vault will choose the most suitable MPPDB for you.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
+          
+          <div class="templatemo_service_title">Tenant Consolidation</div>
+          <p>Deployment Master in Vault will consolidate tenants into different groups, therefore each of the groups share the same resources securely.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="templatemo_servicebox margin_bottom_1col">
+          <div class="templatemo_service_title">Real-time Analytics</div>
+          <p>As the Vault administrator, you can view different analysed data through dashboard, for example, tenant activity, tenant status, tenant group status and so on.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="templatemo_servicebox">
+          <div class="templatemo_service_title">Renting Resources</div>
+          <p>The Vault user can create MPPDBs and database users on the cloud provided by the cloud operator through dashboard in order to enjoy our MPPDB as a service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- service end -->
+
+<!-- footer start -->
+<div class="templatemo_footerwrapper">
+  <div class="container">
+    Code released under the Apache License 2.0.
+    <div class="row">
+      <div class="col-md-12">Copyright &copy; 2016 <a href="#">The Hong Kong Polytechnic University</a> | Database Research Group</div>
+    </div>
+  </div>
+</div>
+<!-- footer end --> 
+<script>
+<!-- scroll to specific id when click on menu -->
+	// Cache selectors
+	var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight() + 15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+            return item;
+        }
+    });
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e) {
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+});
+// Bind to scroll
+$(window).scroll(function() {
+    // Get container scroll position
+    var fromTop = $(this).scrollTop() + topMenuHeight;
+    // Get id of current scroll item
+    var cur = scrollItems.map(function() {
+        if ($(this).offset().top < fromTop)
+            return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length - 1];
+    var id = cur && cur.length ? cur[0].id : "";
+    if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href=#" + id + "]").parent().addClass("active");
+    }
+});
+</script>
+</body>
+</html>

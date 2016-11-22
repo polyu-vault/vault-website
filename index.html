@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- 
+Vault Template
+http://www.templatemo.com/preview/templatemo_426_Vault
+-->
+<head>
+<title>Vault</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+<!-- Style Sheets -->
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/templatemo_misc.css">
+<link rel="stylesheet" href="css/templatemo_style.css">
+<link rel="stylesheet" href="css/styles.css">
+<!-- JavaScripts -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/jquery.singlePageNav.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.lightbox.js"></script>
+<script src="js/templatemo_custom.js"></script>
+<script src="js/responsiveCarousel.min.js"></script>
+</head>
+<body>
+<!-- header start -->
+<div id="templatemo_home_page">
+  <div class="templatemo_topbar">
+    <div class="container">
+      <div class="row">
+        <div class="templatemo_titlewrapper"><img src="images/templatemo_logobg.png" alt="logo background">
+          <div class="templatemo_title"><span>Vault</span></div>
+        </div>
+        <div class="clear"></div>
+        <div class="templatemo_titlewrappersmall">Vault</div>
+        <nav class="navbar navbar-default templatemo_menu" role="navigation">
+          <div class="container-fluid"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="top-menu">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a class="menu" href="index.html">Home</a></li>
+                  <li><a class="menu" href="features.html">Features</a></li>
+                  <li class="dropdown">
+              		<a target="_blank" class="dropdown-toggle" data-toggle="dropdown">
+                		Docs <b class="caret"></b>
+              		</a>
+              		<ul class="dropdown-menu">
+                		<li><a target="_blank" href="https://github.com/polyu-vault/vault-website/wiki">Quick Start</a></li>
+                		<li class="divider"></li>
+              		</ul>
+            	  </li>
+                  <li><a class="menu" href="research.html">Research</a></li>
+                  <li><a class="menu" href="contact.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.navbar-collapse --> 
+          </div>
+          <!-- /.container-fluid --> 
+        </nav>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="templatemo_headerimage">
+    <div class="flexslider">
+      <ul class="slides">
+        <li><img src="images/slider/1.jpg" alt="Slide 1"></li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="slider-caption">
+    <div class="templatemo_homewrapper">
+      <div class="templatemo_hometitle">Vault</div>
+      	<div class="templatemo_hometext">
+                The <i>Vault</i> project aims to achieve a <strong>lower</strong> total cost of ownership by consolidating thousands of MPPDB tenants on to a shared
+				hardware infrastructure, with a performance SLA that guarantees the tenants can obtain the query results as if they are executing their queries on dedicated machines.
+        </div>
+      <div class="templatemo_homebutton"><a href="https://github.com/polyu-vault/vault-website/raw/master/vault_latest.zip" role="button"><strong>Download</strong> Vault </a></div>
+    </div>
+  </div>
+</div>
+<!-- header end -->
+<div class="clear"></div>
+<!-- service start -->
+<div class="templatemo_servicewrapper" id="templatemo_service_page">
+  <div class="container">
+    <div class="row">
+      <h1>MPPDB-as-a-Service</h1>
+      <p>
+      	Recently, massively parallel processing relational database systems (MPPDBs) like Vertica, 
+      	Microsoft PDW, and Greenplum, have gained much momentum in the big data analytic market. 
+      	With the advent of hosted cloud computing, we envision that the offering of MPPDB-as-a-Service
+      	 (MPPDBaaS) will become attractive for companies having analytical tasks on only hundreds gigabytes
+      	  to some ten terabytes of data because they can enjoy high-end parallel analytics at a cheap cost. 
+      	  This project is to research and develop Vault, a prototype implementation of MPPDB-as-a-service.
+      </p>
+      <br>
+      <h1>Vault Architecture</h1>
+      <center>
+          <img src="images/vault_architecture.png" class="img-responsive" ></img>
+      </center>
+     
+    </div>
+  </div>
+</div>
+<!-- service end -->
+<div class="clear"></div>
+<!-- work start -->
+<div class="templatemo_workwrapper" id="templatemo_work_page">
+  <div class="container">
+      <h1>Creating JDBC Application</h1>
+      <br><br>
+	  <div class="col-lg-4">
+          <h3>Easy to learn and use.</h3>
+          <p>
+            Vault provides JDBC Driver to open a database connection, execute SQL query and return the results from the JDBC Application.
+          </p>
+          <p>
+            According to the connection string provided in the JDBC application, Vault would route the request to the available MPPDB(s) for processing the query request.
+          </p>
+        
+      </div>
+      <div>
+          <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css"></link>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+          <script>hljs.initHighlightingOnLoad();</script>
+          <p><strong>Example 1:</strong> Use this template example when you need to create your own JDBC application interacting with Vault. </p>
+          
+          
+          <pre><code class="python">
+          <div align="left" width=1200px;>
+import java.sql.*;
+            
+public class Example() {
+  //JDBC driver name and database URL
+  static final String JDBC_DRIVER = "com.polyu.dbg.thrifty.jdbc.driver.ThriftyDriver";
+  static final String connectionString = "jdbc:vault://localhost:8080/db_srvr/1";
+  				
+  //Database credentials
+  static final String USER = "username";
+  static final String PASSWORD = "password";
+			
+  public static void main(String[] args){
+  Connection conn = null;
+  Statement stmt = null;
+  try{
+    //Register JDBC driver.
+   	Class.forName(JDBC_DRIVER);
+   	 					
+   	//Open a connection
+    System.out.println("Connecting to database...");
+    conn = DriverManager.getConnection(connectionString, USER, PASSWORD);
+      					
+    //Execute a query
+    System.out.println("Creating statement...");
+    stmt = conn.createStatement();
+    stmt.executeUpdate("CREATE TABLE Market(Date Date, Name varchar(64), PTID integer)");
+    stmt.execute("COPY Market From LOCAL '/Users/POLYU/Desktop/sample.txt' DELIMITER '\t'");
+    ResultSet rs = stmt.executeQuery("Select * FROM Market");
+    stmt.executeUpdate("DROP TABLE Market");					
+    } catch(SQLException se){
+      //Handle errors for JDBC
+      se.printStackTrace();
+   	}catch(Exception e){
+      //Handle errors for Class.forName
+      e.printStackTrace();
+   	}finally{
+      //finally block used to close resources
+      try{
+        if(stmt!=null)
+          stmt.close();
+      	}catch(SQLException se2){
+      	}// nothing we can do
+      	try{
+         if(conn!=null)
+           conn.close();
+      	}catch(SQLException se){
+           se.printStackTrace();
+      }//end finally try
+    }//end try
+  }//end main
+}//end Example
+		  </div>
+		  </code></pre>
+          
+        </div>
+ 
+ 
+ 
+  </div>
+</div>
+<!--work end-->
+<div class="clear"></div>
+
+<!-- footer start -->
+<div class="templatemo_footerwrapper">
+  <div class="container">
+    Code released under the Apache License 2.0.
+    <div class="row">
+      <div class="col-md-12">Copyright &copy; 2016 <a href="#">The Hong Kong Polytechnic University</a> | Database Research Group</div>
+    </div>
+  </div>
+</div>
+<!-- footer end --> 
+<script>
+<!-- scroll to specific id when click on menu -->
+// Cache selectors
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight() + 15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+            return item;
+        }
+    });
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e) {
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+});
+// Bind to scroll
+$(window).scroll(function() {
+    // Get container scroll position
+    var fromTop = $(this).scrollTop() + topMenuHeight;
+    // Get id of current scroll item
+    var cur = scrollItems.map(function() {
+        if ($(this).offset().top < fromTop)
+            return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length - 1];
+    var id = cur && cur.length ? cur[0].id : "";
+    if (lastId !== id) {
+        lastId = id;
+        // Set/remove active class
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href=#" + id + "]").parent().addClass("active");
+    }
+});
+</script>
+</body>
+</html>
