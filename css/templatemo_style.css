@@ -94,7 +94,7 @@ Flexslider Overrides
 .slider-caption h2{font-size:48px; text-transform:uppercase; font-weight:800; margin-bottom:30px;}
 .slider-caption p{font-size:16px; text-transform:uppercase; letter-spacing:2px; width:50%; margin:0 auto 30px auto; line-height:1.8em;}
 .flexslider{background-color:#371604; overflow:hidden; margin:0;}
-.flexslider img{position:relative; opacity:0.5; width:100%; z-index:7;}
+.flexslider img{position:relative; opacity:1; width:100%; z-index:7;}
 .flex-control-nav{bottom:15px; z-index:9;}
 .flex-control-paging li{list-style:none;}
 .flex-control-paging li a{background:none; border:none; opacity:0;}
