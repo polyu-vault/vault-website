@@ -147,7 +147,7 @@ Media Queries
 	.templatemo_topbar{height:35px;}
 	.templatemo_headerimage{margin-top:35px;}
 	.templatemo_title{font-size:32px; line-height:50px;}
-	.templatemo_topbar .navbar-nav{width:720px;}
+	.templatemo_topbar .navbar-nav{width:1080px;}
 	.templatemo_titlewrappersmall{display:none;}
 	.templatemo_topbar .navbar{position:relative; top:-35px;}
 	.templatemo_workbox{width:50%;}
@@ -180,7 +180,7 @@ Media Queries
 	.templatemo_hometext{text-align:center; font-size:16px; margin:0 auto; width:80%; line-height:30px;}
 	.templatemo_homebutton{margin:40px auto 20px auto; font-size:18px;}
 	.templatemo_topbar .navbar{position:relative; top:-55px;}
-	.templatemo_topbar .navbar-default .navbar-nav>li>a{color:#ffffff; font-size:16px; padding:15px 25px;}
+	.templatemo_topbar .navbar-default .navbar-nav>li>a{color:#ffffff; font-size:15px; padding:15px 25px;}
 	.slidernav a.previous{left:11%;}
 	.slidernav a.next{right:10%;}
 	.templatemo_worktitle{margin-top:15%; font-size:18px; font-weight:bold; color:#ffffff;}
