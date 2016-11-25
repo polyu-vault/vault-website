@@ -49,19 +49,12 @@
                 <ul class="nav navbar-nav">
                   <li><a class="menu" href="#header">Home</a></li>
                   <li><a class="menu" href="#features">Features</a></li>
-                  <li class="dropdown">
-              		<a target="_blank" class="dropdown-toggle" data-toggle="dropdown">
-                		Docs <b class="caret"></b>
-              		</a>
-              		<ul class="dropdown-menu">
-                		<li><a target="_blank" href="https://github.com/vault-team/vault-website/wiki/Installation-Guide" style="color:white;">Installation Guide</a></li>
-                		<li class="divider"></li>
-                		<li><a target="_blank" href="https://github.com/vault-team/vault-website/wiki/User-Guide" style="color:white;">User Guide</a></li>
-              		</ul>
-            	  </li>
-                  <li><a class="menu" href="#research">Research</a></li>
-                  <li><a class="menu" href="#team">Team</a></li>
+                  <li><a class="menu" href="https://github.com/vault-team/vault-website/wiki/Installation-Guide">Installation Guide</a></li>
+                  <li><a class="menu" href="https://github.com/vault-team/vault-website/wiki/User-Guide">User Guide</a></li>  
+                  <li><a class="menu" href="#publications">Publications</a></li>
+                  <li><a class="menu" href="#contributors">Contributors</a></li>
                   <li><a class="menu" href="#acknowledgements">Acknowledgements</a></li>
+                  <li><a class="menu" href="#acknowledgements">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -84,8 +77,7 @@
     <div class="templatemo_homewrapper">
       <div class="templatemo_hometitle">Vault</div>
       <div class="templatemo_hometext">
-      		The <i>Vault</i> project aims to achieve a <strong>lower</strong> total cost of ownership by consolidating thousands of MPPDB tenants on to a shared
-			hardware infrastructure, with a performance SLA that guarantees the tenants can obtain the query results as if they are executing their queries on dedicated machines.
+      		Massively Parallel Processing Database as a Service for OpenStack
       </div>
       <div class="templatemo_homebutton"><a href="https://github.com/vault-team/vault-website/raw/master/vault_latest.zip" role="button"><strong>Download</strong> Vault </a></div>
     </div>
@@ -97,14 +89,8 @@
   <div class="container">
   <h1>What is Vault?</h1>
   <hr style="border: 0.5px solid #c5cdd8" />​
-      <h4 align="left">MPPDB-as-a-Service:</h4>
       <p align="left">
-      	Recently, massively parallel processing relational database systems (MPPDBs) like Vertica, 
-      	Microsoft PDW, and Greenplum, have gained much momentum in the big data analytic market. 
-      	With the advent of hosted cloud computing, we envision that the offering of MPPDB-as-a-Service
-      	 (MPPDBaaS) will become attractive for companies having analytical tasks on only hundreds gigabytes
-      	  to some ten terabytes of data because they can enjoy high-end parallel analytics at a cheap cost. 
-      	  This project is to develop Vault, a prototype implementation of MPPDB-as-a-service.
+      	A free and open-source cloud deployment of Massively Parallel Process Database (MPPDB) as a Service
       </p>
       <br><br>
       <h4 align="left">Vault Architecture:</h4>
@@ -197,79 +183,54 @@ public class Example() {
 <div class="container">
 <h1>Features</h1>
 <hr></hr>
-      <h4>Objectives:</h4>
 	  <ul>
-		<li type="square"><b>Shared-Process Consolidation</b></li>
-		<ul>
-			<li type="circle">The Shared-Process approach is to share a single database instance among the tenants but each tenant can own its private set of tables</li>
-			<li type="circle">This approach leads to a higher consolidation effectiveness</li>
-		</ul>
-     	
-     	<li type="square"><b>Performance SLA Guarantee</b></li>
-     	<ul>
-			<li type="circle">Ensure that a tenant finishes its queries without feeling any performance delay in a specific percentage of time period.</li>
-		</ul>
-     	
-     	<li type="square"><b>High Availability & Load Balancing</b></li>
-     	<ul>
-			<li type="circle">Multiple MPPDBs in each tenant group allows workload balancing in Vault.</li>
-			<li type="circle">Vault is able to route the query request to the another available MPPDB which has the lowest workload.</li>
-			<li type="circle">Avoid the situation that some MPPDBs handle lots of query requests, but some MPPDBs in the same cluster are idle.</li>
-		</ul>
-	
+		<li type="square"><b>Run entirely on OpenStack</b></li>
+			<p>Users and administrators can provision and manage multiple MPPDB instances with ease.</p>
+     	<li type="square"><b>Extremely low operation cost</b></li>
+     	<div id="publications"></div>
+			<p>Vault is built using shared-process multi-tenancy.  Different from using the virtual machine technology, Vault enables the sharing
+				of cluster computers and database installations among clients. Operating a MPPDB cloud now can save up to 80% resources (e.g.,
+				cluster computers, database licenses, electricity) without jeopardizing the security and performance.
+			</p>
+     	<li type="square"><b> Performance SLA Guarantee</b></li>
+			<p>Ensuring a tenant query performance with SLA</p>
+		<li type="square"><b> Support Vertica</b></li>
       </ul>
 </div>
 
-  <br>
-  <div class="container">
-        
-      <h4>Functions:</h4>
-      <ul>
-    	<li type="square"><b>Query Routing</b></li>
-          <p>Database user send their queries through the JDBC application, and then queries will be routed to the available MPPDBs. Database user do not need to specify the destination of the query because Vault will choose the most suitable MPPDB for you.</p>
-	    <li type="square"><b>Tenant Consolidation</b></li>
-	      <p>Deployment Master in Vault will consolidate tenants into different groups, therefore each of the groups share the same resources securely.</p>
-	    <div id="research"></div>
-	    <li type="square"><b>Real-time Analytics</b></li>
-	      <p>As the Vault administrator, you can view different analysed data through dashboard, for example, tenant activity, tenant status, tenant group status and so on.</p>
-	    <li type="square"><b>Renting Resources</b></li>
-	      <p>The Vault user can create MPPDBs and database users on the cloud provided by the cloud operator through dashboard in order to enjoy our MPPDB as a service</p>
-	  </ul>
-	<br>
-  </div>
-
 <!-- features end -->
 
-<!-- research start -->
+<!-- publications start -->
 <div class="templatemo_servicewrapper">
   <div class="container">
-      <h1>Research</h1>
+      <h1>Publications</h1>
       <hr style="border: 0.5px solid #c5cdd8" />
       <h3 align="left">Parallel Analytics as-a-Service</h3>
       <p align="left">Petrie Wong, Andy He, Eric Lo. <i>In Proceedings of ACM SIGMOD Conference, 2013.</i></p>
-      <div id="team"></div>
+      <div id="contributors"></div>
       <h3 align="left">Thrifty: Offering Parallel Database as a Service using the Shared-Process Approach</h3>
       <p align="left">Petrie Wong, Andy He, Ziqiang Feng, Wenjian Xu, Eric Lo. <i>In Proceedings of ACM SIGMOD Conference, 2015.</i></p>
   </div>  
 </div>
-<!-- research end -->
+<!-- publications end -->
 
-<!-- team start -->
+<!-- contributors start -->
 <div class="white_wrapper">
  <div class="container">
-    <h1>Team</h1>
+    <h1>Contributors</h1>
     <hr></hr>
-  	    <h4>Team Members</h4>
   	    <ul style="list-style-type:disc">
   		  <li>Chris Liu</li>
   		  <li>Eric Lo (PI)</li>
   		  <li>Julian Ip</li>
+  		  <li>Lily Zhang</li>
+  		  <li>Petrie Wong</li>
   	    </ul>
   </div>
   <div id="acknowledgements"></div>
 </div>
 <br>
-<!-- team end -->
+<!-- contributors end -->
 
 <!-- acknowledgements start -->
 <div class="templatemo_servicewrapper">
@@ -278,9 +239,19 @@ public class Example() {
 		<hr style="border: 0.5px solid #c5cdd8" />
   		<p align="left">We are extremely grateful to HP and Greenplum for the support of free academic license of Vertica and Greenplum, respectively.  This project is funded by Hong Kong Government Innovative Technology Fund. </p>
 	</div>
+	<div id="contact"></div>
 </div>
 <!-- acknowledgements end -->
-
+<div class="white_wrapper">
+	<div class="container">
+		<h1>Contact</h1>
+		<hr style="border: 0.5px solid #c5cdd8" />
+  		<p align="left">Please email chrisliu@icloud. </p>
+	</div>
+</div>
+<!-- contact start -->
+	
+<!-- contact end -->
 
 <!-- footer start -->
 <div class="templatemo_footerwrapper">
