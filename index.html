@@ -85,96 +85,15 @@
 </div>
 <!-- header end -->
 <div class="clear"></div>
-<div class="templatemo_servicewrapper" id="templatemo_service_page">
-  <div class="container">
-  <h1>What is Vault?</h1>
-  <hr style="border: 0.5px solid #c5cdd8" />​
+  <div class="templatemo_servicewrapper" id="templatemo_service_page">
+    <div class="container">
+    <h1>What is Vault?</h1>
+    <div id="features"></div>
+    <hr style="border: 0.5px solid #c5cdd8" />​
       <p align="left">
       	A free and open-source cloud deployment of Massively Parallel Process Database (MPPDB) as a Service
       </p>
-      <br><br>
-      <h4 align="left">Vault Architecture:</h4>
-      <center>
-          <img src="images/vault_architecture.png" class="img-responsive" ></img>
-      </center>
-  </div>
-  <div class="clear"></div>
-<div class="templatemo_workwrapper" id="templatemo_work_page">
-  <div class="container">
-      <h4 align="left"><a name="example" style="color:#828a97;">Creating JDBC Application:</a></h4>
-	  <div class="col-lg-4">
-          <p align="left">
-            Vault provides JDBC Driver to open a database connection, execute SQL query and return the results from the JDBC Application.
-          </p>
-          <p align="left">
-            According to the connection string provided in the JDBC application, Vault would route the request to the available MPPDB(s) for processing the query request.
-          </p>
-        
-      </div>
-      <div>
-          <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css"></link>
-          <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-          <script>hljs.initHighlightingOnLoad();</script>
-          <p><strong>Example 1:</strong> Use this template example when you need to create your own JDBC application interacting with Vault. </p>
-          <pre><code class="python">
-          <div align="left" width=1200px;>
-import java.sql.*;
-            
-public class Example() {
-  //JDBC driver name and database URL
-  static final String JDBC_DRIVER = "vault.jdbc.driver.VaultDriver";
-  static final String connectionString = "jdbc:vault://localhost:8080/db_srvr/1";
-  				
-  //Database credentials
-  static final String USER = "username";
-  static final String PASSWORD = "password";
-			
-  public static void main(String[] args){
-  Connection conn = null;
-  Statement stmt = null;
-  try{
-    //Register JDBC driver.
-   	Class.forName(JDBC_DRIVER);
-   	 					
-   	//Open a connection
-    System.out.println("Connecting to database...");
-    conn = DriverManager.getConnection(connectionString, USER, PASSWORD);
-      					
-    //Execute a query
-    System.out.println("Creating statement...");
-    stmt = conn.createStatement();
-    stmt.executeUpdate("CREATE TABLE Market(Date Date, Name varchar(64), PTID integer)");
-    stmt.execute("COPY Market From LOCAL '/Users/Vault/sample.txt' DELIMITER '\t'");
-    ResultSet rs = stmt.executeQuery("Select * FROM Market");
-    stmt.executeUpdate("DROP TABLE Market");					
-    } catch(SQLException se){
-      //Handle errors for JDBC
-      se.printStackTrace();
-   	}catch(Exception e){
-      //Handle errors for Class.forName
-      e.printStackTrace();
-   	}finally{
-      //finally block used to close resources
-      try{
-        if(stmt!=null)
-          stmt.close();
-      	}catch(SQLException se2){
-      	}// nothing we can do
-      	try{
-         if(conn!=null)
-           conn.close();
-      	}catch(SQLException se){
-           se.printStackTrace();
-      }//end finally try
-    }//end try
-  }//end main
-}//end Example
-		  </div>
-		  <div id="features"></div>
-		  </code></pre>
-        </div>
-  </div>
-</div>
+    </div>
 </div>
 
 <!-- home end -->
